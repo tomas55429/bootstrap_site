@@ -23,6 +23,7 @@
 <body>
 
     <header class="jumbotron jumbotron-fluid">
+
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-2 col-md-2 algn-self-center">
@@ -33,10 +34,75 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-md-4 col-xl-2 mb-5 mt-5">
-                    <a href="#reservationForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title=" Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
-                    </div>
+                        <a role="button" data-toggle="modal" data-target="#reservecampsite" class="btn btn-lg btn-info">
+                            Reserve Campsite
+                        </a>
+            </div>
             </div>
         </div>
+
+        <div id="reservecampsite" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="container-fluid bg-info">
+                            <h4 class="modal-title">Reserve Campsite </h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                                <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="numCampers" class="sm-6 col-form-label text-dark">Number of Campers</label>
+                                    </div>
+                                
+                                    <div class="col-md-6">
+                                        <select class="form-control mx-auto form-control-lg mb-3" id="numCampers">
+                                            <option>Select...</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                        </select>
+                                        </div>
+                                </div>
+            
+                                <div class="row">
+                                    <div class="col-md-6">
+                                            <label for="selectdate" class="col-form-label order-first text-dark">Date</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <form>
+                                                <div class="form-group">
+                                                
+                                                <input type="date" class="form-control mx-auto align-items-last" id="selectdate" aria-describedby="emailHelp" placeholder="mm/dd/yyyy">
+                
+                                                </div>
+                                            </form>
+                                    </div>
+                                    </div>
+
+                                    <div class="row">
+                                            <div class="col col-md-6 ml-auto m-2">
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-success">Tent</button>
+                                                <button type="button" class="btn btn-primary">RV</button>
+                                              </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                        <a href="#" class="btn btn-secondary">Cancel</a>
+                                        <a href="#" class="btn btn-primary">Reserve</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
     </header>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -130,6 +196,15 @@
                                 <span class="carousel-control-next-icon"></span>
                                 <span class="sr-only">Next</span>
                             </a>
+
+                            <div class="btn-group" id="carouselButton">
+                                <button class="btn btn-danger btn-sm" id="carouselPause">
+                                    <i class="fa fa-pause"></i>
+                                </button>
+                                <button class="btn btn-danger btn-sm" id="carouselPlay">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                            </div>
                     </div>
                 </div>
         <div class="row row-content align-items-center">
@@ -294,6 +369,17 @@
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
             })
+
+
+            $(function() {
+            $(".carousel").carousel( { interval: 2000 } );
+            $("#carouselPause").click(function(){
+                $(".carousel").carousel("pause");
+            });
+            $("#carouselPlay").click(function(){
+                $(".carousel").carousel("cycle");
+            });
+        });
         </script>
 
 </body>
