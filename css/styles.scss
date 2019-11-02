@@ -1,3 +1,4 @@
+$color-teal:#17A2B8;
 $color-primary: #3046C5;
 $color-secondary: #5637dd;
 $color-pale: #CEC8FF;
@@ -72,4 +73,18 @@ header {
     bottom: 0;
 }
 
+
+#reservecampsite {
+.modal-header {
+        background-color: $color-teal;
+        color: white;
+    }
+}
+
+#loginModal {
+    .modal-header {
+            background-color: $color-mid;
+            color: white;
+        }
+    }
 

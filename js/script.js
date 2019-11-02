@@ -2,6 +2,20 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
 
+$(function () {
+
+$("#reserveButton").click(function(){
+    $("#reservecampsite").modal('toggle');
+  });
+});
+
+$(function () {
+
+    $("#loginButton").click(function(){
+        $("#loginModal").modal('toggle');
+      });
+      $("#close-login").modal('hide');
+    });
 
 $(function() {
 $(".carousel").carousel( { interval: 2000 } );
@@ -17,3 +31,4 @@ $("#carouselButton").click(function(){
     }
 });
 });
+
