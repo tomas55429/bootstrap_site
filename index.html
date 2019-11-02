@@ -5,17 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-
-
-
     <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <title>NuCamp: A Better Way To Camp</title>
 </head>
@@ -197,14 +192,11 @@
                                 <span class="sr-only">Next</span>
                             </a>
 
-                            <div class="btn-group" id="carouselButton">
-                                <button class="btn btn-danger btn-sm" id="carouselPause">
+                           
+                                <button class="btn btn-danger btn-sm" id="carouselButton">
                                     <i class="fa fa-pause"></i>
                                 </button>
-                                <button class="btn btn-danger btn-sm" id="carouselPlay">
-                                    <i class="fa fa-play"></i>
-                                </button>
-                            </div>
+                            
                     </div>
                 </div>
         <div class="row row-content align-items-center">
@@ -360,28 +352,12 @@
         </div>
  
     </footer>
-        <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+        <!-- build:js js/main.js -->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <script>
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-
-
-            $(function() {
-            $(".carousel").carousel( { interval: 2000 } );
-            $("#carouselPause").click(function(){
-                $(".carousel").carousel("pause");
-            });
-            $("#carouselPlay").click(function(){
-                $(".carousel").carousel("cycle");
-            });
-        });
-        </script>
-
+        <script src="js/script.js"></script>
+        <!-- endbuild -->
 </body>
 
 </html>
